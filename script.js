@@ -8,10 +8,21 @@ const images = document.getElementsByClassName("mySlides");
 
 images[0].style.display = "block";
 let index = 0;
+let interval = setInterval(()=> {
+    rightBtn.click();
+}, 3000);
 /*
 let interval = setInterval(()=>{
     rightBtn.click();
 }, 3000);*/
+function handleRest(index){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+    document.getElementsByClassName("dot")[index].classList.add("active");
+    clearInterval(interval);
+    interval = setInterval(()=> {
+        rightBtn.click();
+    }, 3000);
+}
 
 rightBtn.addEventListener("click", () => {
     index++;
@@ -21,8 +32,7 @@ rightBtn.addEventListener("click", () => {
     /*slider.style.backgroundImage = images[index];*/
     Array.from(images).forEach(image => image.style.display = "none");
     images[index].style.display = "block";
-    document.getElementsByClassName("active")[0].classList.remove("active");
-    document.getElementsByClassName("dot")[index].classList.add("active");
+    handleRest(index);
 })
 
 leftBtn.addEventListener("click", () => {
@@ -35,10 +45,8 @@ leftBtn.addEventListener("click", () => {
         image.style.display = "none"
     });
     images[index].style.display = "block";
-    document.getElementsByClassName("active")[0].classList.remove("active");
-    document.getElementsByClassName("dot")[index].classList.add("active");
+    handleRest(index);
 })
-
 /*
 tab_buttons.addEventListener("click", e => {
     let target = e.target;
