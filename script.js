@@ -1,8 +1,8 @@
 const tabs = document.getElementsByClassName("tab");
 const slider = document.getElementsByTagName("header")[0];
 /*const tab_buttons = document.getElementsByClassName("tab-button");*/
-const leftBtn = document.getElementById("leftBtn");
-const rightBtn = document.getElementById("rightBtn");
+const leftBtn = document.querySelector(".prev");
+const rightBtn = document.getElementsByClassName("next")[0];
 /*const images = ["Images/Zorb1.jpeg","Images/Zorb2.jpg","Images/Zorb3.jpeg"];*/
 const images = document.getElementsByClassName("mySlides");
 
