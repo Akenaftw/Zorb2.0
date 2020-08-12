@@ -13,7 +13,7 @@ let interval = setInterval(()=>{
     rightBtn.click();
 }, 3000);*/
 
-leftBtn.addEventListener("click", () => {
+rightBtn.addEventListener("click", () => {
     index++;
     if(index === images.length){
         index = 0;
@@ -21,10 +21,11 @@ leftBtn.addEventListener("click", () => {
     /*slider.style.backgroundImage = images[index];*/
     Array.from(images).forEach(image => image.style.display = "none");
     images[index].style.display = "block";
-
+    document.getElementsByClassName("active")[0].classList.remove("active");
+    document.getElementsByClassName("dot")[index].classList.add("active");
 })
 
-rightBtn.addEventListener("click", () => {
+leftBtn.addEventListener("click", () => {
     index--;
     if(index < 0){
         index = images.length - 1;
@@ -34,6 +35,8 @@ rightBtn.addEventListener("click", () => {
         image.style.display = "none"
     });
     images[index].style.display = "block";
+    document.getElementsByClassName("active")[0].classList.remove("active");
+    document.getElementsByClassName("dot")[index].classList.add("active");
 })
 
 /*
