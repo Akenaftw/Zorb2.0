@@ -7,6 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
 
 </head>
+<body>
 <header>
     <div class="carousel-container">
 
@@ -17,20 +18,19 @@
         </div>
 
         <div class="mySlides fade">
-        <div class="carousel-slide">2 / 3</div>
+            <div class="carousel-slide">2 / 3</div>
             <img src="Images/Zorb2.jpg" alt="Zorb Bouncing" style="width:100%">
             <div class="text">Caption</div>
         </div>
 
-        <div>
-            <div class="mySlides fade">
+        <div class="mySlides fade">
             <div class="carousel-slide">3 / 3</div>
             <img src="Images/Zorb3.jpg" alt="Zorb little girl" style="width:100%">
             <div class="text">Caption</div>
         </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+        <a class="prev" id="leftBtn" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" id="rightBtn" onclick="plusSlides(1)">&#10095;</a>
 
     </div>
     <br>
@@ -42,7 +42,7 @@
     </div>
 
 </header>
-<body>
 
+<script src="script.js"></script>
 </body>
 </html>
