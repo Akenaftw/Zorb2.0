@@ -1,12 +1,14 @@
-const tabs = document.getElementsByClassName("tab");
+const tabs = document.getElementsByClassName("tab_info");
 const slider = document.getElementsByTagName("header")[0];
 /*const tab_buttons = document.getElementsByClassName("tab-button");*/
 const leftBtn = document.querySelector(".prev");
 const rightBtn = document.getElementsByClassName("next")[0];
 /*const images = ["Images/Zorb1.jpeg","Images/Zorb2.jpg","Images/Zorb3.jpeg"];*/
 const images = document.getElementsByClassName("mySlides");
+//const tabcontents = document.getElementsByClassName("tab_info");
 
-images[0].style.display = "block";
+images[0].style.display = "block"
+tabs[0].style.display = "block";
 let index = 0;
 let interval = setInterval(()=> {
     rightBtn.click();
@@ -21,7 +23,7 @@ function handleRest(index){
     clearInterval(interval);
     interval = setInterval(()=> {
         rightBtn.click();
-    }, 3000);
+    }, 6000);
 }
 
 rightBtn.addEventListener("click", () => {
@@ -47,6 +49,15 @@ leftBtn.addEventListener("click", () => {
     images[index].style.display = "block";
     handleRest(index);
 })
+
+document.querySelector(".buttons").addEventListener("click", (e) => {
+    e.preventDefault();
+    target = e.target;
+    id = target.dataset.id;
+    console.log(id);
+    Array.from(tabs).forEach(tab => tab.style.display = "none");
+    document.getElementById(id).style.display = "block";
+})
 /*
 tab_buttons.addEventListener("click", e => {
     let target = e.target;
@@ -56,13 +67,13 @@ tab_buttons.addEventListener("click", e => {
     });
     showTab.style.display = "block";
 })*/
-
+let countInterval;
 function Counter(){
     let countDiv = document.getElementById("counter");
     let countTo = countDiv.innerText;
     let counter = 0;
-    let countInterval = setInterval(() => {
-
+    countInterval = setInterval(() => {
+        countDiv.innerText = counter;
         if(counter === countTo){
             clearInterval(countInterval)
         }

@@ -110,11 +110,7 @@ img{
     .prev, .next,.text {font-size: 11px}
 }
 
-.info{
-    display: none;
-}
-
-.summary{
+.tab_info{
     display: none;
 }
 
