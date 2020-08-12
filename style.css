@@ -9,7 +9,7 @@ body {
 }
 
 .mySlides {
-    display: none
+    display: none;
 }
 img {
     vertical-align: middle;
@@ -109,3 +109,41 @@ img{
     .prev, .next,.text {font-size: 11px}
 }
 
+.info{
+    display: none;
+}
+
+.summary{
+    display: none;
+}
+
+.tab{
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tab:hover{
+    background-color: grey;
+ }
+.framewrap{
+    width: 75%;
+    alignment: center;
+    border: solid black;
+    position: center;
+}
+.buttons{
+    width:100%;
+    object-fit: cover;
+}
+.content{
+    alignment: center;
+    padding: 2% ;
+    width: 75%;
+}
