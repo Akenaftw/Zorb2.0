@@ -5,7 +5,8 @@ header{
     position: relative;
 }
 body {
-    font-family: Verdana, sans-serif; margin:0
+    font-family: Verdana, sans-serif;
+    margin:0;
 }
 
 .mySlides {
@@ -124,26 +125,56 @@ img{
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 1% 2%;
     font-size: 17px;
-    width: 25%;
+    width: 33.3%;
 }
 
 .tab:hover{
-    background-color: grey;
+    background-color: #3f3f3f;
  }
 .framewrap{
-    width: 75%;
+
+    background-color: #cbc5c1;
+    margin-left:15%;
+    margin-right: 15%;
+    width: 70%;
     alignment: center;
     border: solid black;
     position: center;
+    display: block;
+    float: left;
+    padding-bottom: 1%;
 }
 .buttons{
+    display: block;
+    float: left;
     width:100%;
     object-fit: cover;
+    border: solid #3f3f3f;
+    background-color: #3f3f3f;
+
 }
 .content{
     alignment: center;
     padding: 2% ;
     width: 75%;
 }
+.contact{
+    display: block;
+}
+.label{
+    alignment: left;
+    float: left;
+}
+.input{
+    alignment: right;
+    float: left;
+}
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; padding-right:5%}
+input { display: table-cell; }
+
+
